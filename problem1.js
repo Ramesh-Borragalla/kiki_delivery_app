@@ -72,10 +72,6 @@ async function calculateCost() {
   package_details.forEach((ele, index) => {
     total_cost =
       parseInt(baseDeliveryCost) + ele.package_weight * 10 + ele.distance * 5;
-    // console.log(
-    //   `Total cost for package ${index + 1} before discount: ${total_cost}`
-    // );
-
     const offer = offers[ele.offer_code];
     if (
       offer &&
@@ -86,23 +82,8 @@ async function calculateCost() {
     ) {
       discount_amount = (total_cost * offer.discount) / 100;
       total_cost -= discount_amount;
-      //   console.log(
-      //     `Discount amount for package ${index + 1}: ${discount_amount}`
-      //   );
     }
     console.log(`${ele.package_id} ${discount_amount} ${total_cost}`);
-    // else {
-    //   console.log(`No discount for package ${index + 1}`);
-    // }
-
-    // console.log(
-    //   `Total cost for package ${index + 1} after discount: ${total_cost}\n`
-    // );
   });
 }
-
-// calculateCost().then(() => {
-//   console.log("All packages processed successfully.");
-// });
-
 calculateCost();
