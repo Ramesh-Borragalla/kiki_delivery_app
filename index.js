@@ -8,8 +8,8 @@ async function main() {
     input.base_delivery_cost,
     input.package_details
   );
-  // console.log("package_details after delivery cost: ", package_details);
-  await calculateEstimatedDeliveryTime(
+
+  calculateEstimatedDeliveryTime(
     package_details,
     input.vehicles_data,
     input.vehicle_max_speed,

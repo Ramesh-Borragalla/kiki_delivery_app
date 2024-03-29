@@ -35,7 +35,6 @@ async function estimated_delivery_time(
         } ${ele.estimated_delivery_time.toFixed(2)}`
       )
     );
-    return package_details;
   }
 }
 
