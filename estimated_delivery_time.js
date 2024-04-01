@@ -1,4 +1,4 @@
-async function estimated_delivery_time(
+function estimated_delivery_time(
   package_details,
   vehicles_data,
   vehicle_max_speed,
@@ -14,7 +14,7 @@ async function estimated_delivery_time(
 
   if (packages_filtered.length > 0) {
     for (const vehicle of vehicles_data) {
-      await processVehicle(
+      processVehicle(
         vehicle,
         packages_filtered,
         vehicle_max_speed,
@@ -27,18 +27,11 @@ async function estimated_delivery_time(
       vehicle_max_speed,
       vehicle_max_weight
     );
-  } else {
-    package_details.forEach((ele) =>
-      console.log(
-        `${ele.package_id} ${ele.discount} ${
-          ele.total_cost
-        } ${ele.estimated_delivery_time.toFixed(2)}`
-      )
-    );
   }
+  return package_details;
 }
 
-async function processVehicle(
+function processVehicle(
   vehicle,
   packages,
   vehicle_max_speed,

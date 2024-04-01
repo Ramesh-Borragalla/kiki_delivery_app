@@ -9,11 +9,19 @@ async function main() {
     input.package_details
   );
 
-  calculateEstimatedDeliveryTime(
+  const result = calculateEstimatedDeliveryTime(
     package_details,
     input.vehicles_data,
     input.vehicle_max_speed,
     input.vehicle_max_weight
+  );
+
+  result.forEach((ele) =>
+    console.log(
+      `${ele.package_id} ${ele.discount} ${
+        ele.total_cost
+      } ${ele.estimated_delivery_time.toFixed(2)}`
+    )
   );
 }
 
