@@ -72,11 +72,11 @@ function processVehicle(
     }
   }
 
-  for (const package of current_vehicle_details) {
-    package.is_vehicle_arranged = true;
-    package.estimated_delivery_time =
-      vehicle.vehicle_available_time + package.distance / vehicle_max_speed;
-    package.vehicle_number = vehicle.vehicle_no;
+  for (const pkg of current_vehicle_details) {
+    pkg.is_vehicle_arranged = true;
+    pkg.estimated_delivery_time =
+      vehicle.vehicle_available_time + pkg.distance / vehicle_max_speed;
+    pkg.vehicle_number = vehicle.vehicle_no;
   }
 
   const filter = current_vehicle_details
