@@ -1,0 +1,25 @@
+{
+  "name": "everest_engineering_coding_challenge",
+  "version": "1.0.0",
+  "description": "To run the code, use below command and give the input\r node courier_service.js",
+  "main": "courier_service.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramesh-Borragalla/kiki_delivery_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramesh-Borragalla/kiki_delivery_app/issues"
+  },
+  "homepage": "https://github.com/Ramesh-Borragalla/kiki_delivery_app#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
